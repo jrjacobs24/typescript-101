@@ -1,0 +1,17 @@
+{
+  "exclude": ["./dist"],
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "react",
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "~*": ["./*"]
+    },
+    "strict": true,
+    "sourceMap": true,
+    "target": "ESNext",
+    "esModuleInterop": true
+  }
+}

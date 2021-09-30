@@ -3,6 +3,7 @@ const isOpen: boolean = false;
 const myName: string = 'JJ';
 
 const myAge: number = 31;
+const myAgeDecimal: number = 31.5;
 
 const list: number[] = [0, 1, 2];
 
