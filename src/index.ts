@@ -17,3 +17,22 @@ const job: Job = Job.WebDev;
 // Any
 const phone: any = 'Pixel';
 const tablet: any = 3;
+
+
+// Functions in TypeScript
+
+// ? for optional params
+// const sayWord = (word?: string): string => {
+//   console.log(word || 'Hello');
+//   return word || 'Hello';
+// };
+
+// Default params
+// Rest params work as expected
+const sayWord = (word = 'Hello', ...otherStuff: string[]): string => {
+  console.log(otherStuff);
+  return word;
+};
+
+sayWord('JJ', 'Wes');
+sayWord();
