@@ -36,3 +36,15 @@ const sayWord = (word = 'Hello', ...otherStuff: string[]): string => {
 
 sayWord('JJ', 'Wes');
 sayWord();
+
+
+//
+// Implicit Types in TS
+//
+let newName = 'JJ';
+newName = 'Wes';
+newName = 10;
+
+// Gets type from initial declaration
+let newNameTwo = newName;
+newNameTwo = 10;
