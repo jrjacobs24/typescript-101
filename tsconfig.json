@@ -1,5 +1,11 @@
 {
-  "exclude": ["./dist"],
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "./dist"
+  ],
   "compilerOptions": {
     "allowJs": true,
     "jsx": "react",
@@ -9,9 +15,11 @@
     "paths": {
       "~*": ["./*"]
     },
+    "outDir": "dist",
     "strict": true,
     "sourceMap": true,
     "target": "ESNext",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "removeComments": true
   }
 }
