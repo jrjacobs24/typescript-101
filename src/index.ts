@@ -43,8 +43,34 @@ sayWord();
 //
 let newName = 'JJ';
 newName = 'Wes';
-newName = 10;
+// newName = 10;
 
 // Gets type from initial declaration
 let newNameTwo = newName;
-newNameTwo = 10;
+// newNameTwo = 10;
+
+//
+// Union Types with |
+//
+const makeMargin = (x: string | number | boolean): string => {
+  return `margin: ${x}px;`;
+};
+
+makeMargin(10);
+makeMargin('Scott');
+makeMargin(false);
+
+
+//
+// Null Types
+//
+// `null` is inferred when `strictNullChecks: false` in tsconfig
+//
+
+let dog: string | undefined = 'Sammy';
+dog = null;
+console.log('dog: ', dog);
+dog = 'Lucy';
+dog = undefined;
+dog = 10;
+dog = false;
