@@ -112,8 +112,8 @@ enum Type {
 
 const createNumericContent = (contentType = Type) => {};
 
-createNumericContent(Type.Quiz);
-createNumericContent(0);
+// createNumericContent(Type.Quiz);
+// createNumericContent(0);
 
 // Logs `2` (index 2, like an array)
 console.log(Type.Quiz);
@@ -126,6 +126,38 @@ enum Type2 {
 }
 
 const createStringContent = (contentType = Type2) => {};
-createStringContent(Type2.Quiz);
+// createStringContent(Type2.Quiz);
 
 console.log(Type2.Quiz);
+
+
+//
+// Classes
+//
+
+class Team {
+  teamName: string;
+
+  // Same as above
+  // public teamName: string;
+
+  // "private" prevents outside usage
+  // private teamName: string; 
+
+  // Can only be set initially or in constructor
+  // readonly teamName: string;
+
+  constructor(teamName: string) {
+    this.teamName = teamName;
+  }
+
+  score(): string {
+    console.log(this.teamName);
+    return 'goal!';
+  }
+}
+
+const redWings = new Team('Red Wings');
+redWings.score();
+redWings.teamName;
+
