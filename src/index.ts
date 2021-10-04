@@ -1,3 +1,5 @@
+import Job, { Person, Type, Type2, Team } from './interfaces';
+
 const isOpen: boolean = false;
 
 const myName: string = 'JJ';
@@ -10,8 +12,7 @@ const list: number[] = [0, 1, 2];
 // Tupals
 const me: [string, number, boolean] = ['Scott', 32, false];
 
-// Enum
-enum Job { WebDev, WebDesigner, PM }
+
 const job: Job = Job.WebDev;
 
 // Any
@@ -76,15 +77,6 @@ dog = undefined;
 // dog = false;
 
 
-//
-// Interfaces
-//
-
-interface Person {
-  name: string,
-  age?: number
-}
-
 // const sayName = ({ name, age }: Person): string => {
 //   console.log(name);
 //   return name;
@@ -103,12 +95,6 @@ sayName({ age: 31, name: 'JJ' });
 // Enums
 //
 
-// Numeric Enum
-enum Type {
-  Video, // 0
-  BlogPost, // 1
-  Quiz // 2
-}
 
 const createNumericContent = (contentType = Type) => {};
 
@@ -118,12 +104,6 @@ const createNumericContent = (contentType = Type) => {};
 // Logs `2` (index 2, like an array)
 console.log(Type.Quiz);
 
-// String Enum
-enum Type2 {
-  Video = 'VIDEO',
-  BlogPost = 'BLOG_POST',
-  Quiz = 'QUIZ'
-}
 
 const createStringContent = (contentType = Type2) => {};
 // createStringContent(Type2.Quiz);
@@ -134,28 +114,6 @@ console.log(Type2.Quiz);
 //
 // Classes
 //
-
-class Team {
-  teamName: string;
-
-  // Same as above
-  // public teamName: string;
-
-  // "private" prevents outside usage
-  // private teamName: string; 
-
-  // Can only be set initially or in constructor
-  // readonly teamName: string;
-
-  constructor(teamName: string) {
-    this.teamName = teamName;
-  }
-
-  score(): string {
-    console.log(this.teamName);
-    return 'goal!';
-  }
-}
 
 const redWings = new Team('Red Wings');
 redWings.score();
