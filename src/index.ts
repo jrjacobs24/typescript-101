@@ -130,3 +130,22 @@ const outputInput = <T>(arg: T): T => {
 
 const output = outputInput('hi');
 const output2 = outputInput(3);
+
+
+//
+// 'Duck' Typing
+//
+
+class Dancer implements Person {
+  name!: string;
+  age?: number | undefined;
+}
+
+let ElNino: Person = new Dancer();
+
+const fake = {
+  name: 'JJ',
+  year: 31,
+};
+
+ElNino = fake;
